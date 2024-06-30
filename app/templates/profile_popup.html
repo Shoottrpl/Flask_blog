@@ -1,0 +1,28 @@
+<div>
+    <img src="{{user.avatar(64)}}" style="margin: 5px; float: left">
+    <p><a href="{{url_for('main.profile', username=user.name)}}">{{user.name}}</a></p>
+    {% if user.about_me %} <p>{{user.about}}</p>{%endif%}
+    <div class="clearfix"></div>
+    {% if user.last_seen %}
+    <p>{{_('Был в сети')}}: {{moment(user.last_seen).format('lll')}}</p>
+    {%endif%}
+    <p>{{_('%(count)d подписчиков', count=user.followers_count())}}, {{_('%(count)d отслеживаемые', count=user.following_count())}}</p>
+    {%if user != current_user%}
+        {%if not current_user.is_following(user) %}
+            <p>
+                <form action="{{url_for('main.follow', username=user.name)}}" method="post"></form>
+                    {{form.hidden_tag()}}
+                    {{form.submit(value=_('Подпитсаться'), class='btn btn-outline-primary btn-sm')}}
+                </form>
+            </p>
+        {%else%}
+            <p>
+                <form action="url_for('main.unfollow'), username=user.name" method="post"></form>
+                    {{form.hidden_tag()}}
+                        {{form.submit(value=_('Отписаться'), class='btn btn-outline-primary btn-sm')}}
+                </form>
+            </p>
+        {%endif%}
+    {%endif%}
+</div>
+    

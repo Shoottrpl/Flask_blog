@@ -1,0 +1,348 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-06-30 21:38+0300\n"
+"PO-Revision-Date: 2024-05-28 23:19+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: app/__init__.py:23
+msgid "Авторизируйтесь для доступа на страницу"
+msgstr "Authorize to access the page"
+
+#: app/translate.py:10
+msgid "Error: служба перевода не настроена."
+msgstr "Error: The translation service is not configured."
+
+#: app/auth/email.py:10
+msgid "[testsite] Сбросьте пароль"
+msgstr "[testsite] Reset password"
+
+#: app/auth/forms.py:12
+msgid "Логин: "
+msgstr "Login: "
+
+#: app/auth/forms.py:13 app/auth/forms.py:23 app/main/forms.py:13
+#: app/main/forms.py:34
+msgid "Имя должен быть от 4 до 100 символов"
+msgstr "The name should be between 4 and 100 characters"
+
+#: app/auth/forms.py:14 app/auth/forms.py:25
+msgid "Пароль: "
+msgstr "Password: "
+
+#: app/auth/forms.py:15 app/auth/forms.py:26
+msgid "Пароль должен быть от 4 до 100 символов"
+msgstr "Password must be between 4 and 100 characters"
+
+#: app/auth/forms.py:17
+msgid "Запомнить"
+msgstr "Remember"
+
+#: app/auth/forms.py:18 app/templates/auth/login.html:4
+#: app/templates/base.html:44
+msgid "Войти"
+msgstr "Login"
+
+#: app/auth/forms.py:22 app/main/forms.py:13 app/templates/profile.html:9
+msgid "Имя:"
+msgstr "Name:"
+
+#: app/auth/forms.py:24 app/auth/forms.py:45 app/main/forms.py:41
+msgid "Email: "
+msgstr "Email: "
+
+#: app/auth/forms.py:24 app/auth/forms.py:45 app/main/forms.py:41
+msgid "Некорректный email"
+msgstr "Incorrect email"
+
+#: app/auth/forms.py:29
+msgid "Повтор пароля: "
+msgstr "Password Repeat: "
+
+#: app/auth/forms.py:30
+msgid "Пароли не совпадают"
+msgstr "The passwords don't match"
+
+#: app/auth/forms.py:31
+msgid "Регестрация"
+msgstr "Registration"
+
+#: app/auth/forms.py:36
+msgid "Пользователь с таким именем уже существует"
+msgstr "A user with this name already exists"
+
+#: app/auth/forms.py:41
+msgid "Пользователь с такой почтой уже существует"
+msgstr "A user with this mail already exists"
+
+#: app/auth/forms.py:46 app/auth/forms.py:54 app/main/forms.py:15
+#: app/main/forms.py:29 app/main/forms.py:37 app/main/forms.py:42
+#: app/main/forms.py:50 app/main/forms.py:67
+msgid "Отправить"
+msgstr "Send"
+
+#: app/auth/forms.py:50 app/main/forms.py:46
+msgid "Пароль"
+msgstr "Пароль"
+
+#: app/auth/forms.py:52 app/main/forms.py:48
+msgid "Повтор пароля"
+msgstr "Password repeat"
+
+#: app/auth/routes.py:24
+msgid "Введен неверный пароль или логин"
+msgstr "Incorrect password or login has been entered"
+
+#: app/auth/routes.py:33
+msgid "Авторизация"
+msgstr "Authorization"
+
+#: app/auth/routes.py:47
+msgid "Вы успешно зарегистрированы"
+msgstr "You have been successfully registered"
+
+#: app/auth/routes.py:50
+msgid "Ошибка при добавлении в БД"
+msgstr "Error when adding to the database"
+
+#: app/auth/routes.py:52
+msgid "Регистрация"
+msgstr "Registration"
+
+#: app/auth/routes.py:58
+msgid "Вы вышли из аккаунта"
+msgstr "Вы вышли из аккаунта"
+
+#: app/auth/routes.py:72
+msgid "Инструкция по сбросу пароля отправлена на ваш email"
+msgstr "Password reset instructions have been sent to your email address"
+
+#: app/auth/routes.py:74 app/auth/routes.py:91
+#: app/templates/auth/reset_password.html:4
+#: app/templates/auth/reset_password_request.html:4
+msgid "Смена пароля"
+msgstr "Password change"
+
+#: app/auth/routes.py:89
+msgid "Пароль изменене"
+msgstr "Password changed"
+
+#: app/main/forms.py:14
+msgid "О себе"
+msgstr "About me"
+
+#: app/main/forms.py:14 app/main/forms.py:36
+msgid "Текст должен быть до 140 символов"
+msgstr "Text should be up to 140 characters"
+
+#: app/main/forms.py:25
+msgid "Пользователь с таким именем уже существует, выбирите другое"
+msgstr "User with this name already exists, choose another one"
+
+#: app/main/forms.py:33
+msgid "Заголовок"
+msgstr "Заголовок"
+
+#: app/main/forms.py:35
+msgid "Напишите что-то"
+msgstr "Write something"
+
+#: app/main/forms.py:54 app/main/routes.py:165
+#, fuzzy
+msgid "Поиск"
+msgstr "subscribers"
+
+#: app/main/forms.py:65
+msgid "Сообщение"
+msgstr "Message"
+
+#: app/main/routes.py:36
+msgid "Пост опубликован"
+msgstr "The post published"
+
+#: app/main/routes.py:62 app/templates/base.html:51
+msgid "Профиль"
+msgstr "Profile"
+
+#: app/main/routes.py:80
+msgid "Изменения сохранены"
+msgstr "The changes have been saved"
+
+#: app/main/routes.py:85
+msgid "Изменение профиля"
+msgstr "Profile change"
+
+#: app/main/routes.py:97 app/main/routes.py:119
+#, python-format
+msgid "Пользователя %(username)s не существует"
+msgstr "User %(username)s does not exist"
+
+#: app/main/routes.py:100
+msgid "Нельзя подписаться на самого себя"
+msgstr "User %(username)s does not exist"
+
+#: app/main/routes.py:104
+#, python-format
+msgid "В подписаны на %(username)s"
+msgstr "Subscribed to %(username)s"
+
+#: app/main/routes.py:122
+msgid "Нельзя отписаться на самого себя"
+msgstr "You can't unsubscribe to yourself"
+
+#: app/main/routes.py:126
+#, python-format
+msgid "Вы отписались от %(username)s"
+msgstr "Вы отписались от %(username)s"
+
+#: app/main/routes.py:140
+msgid "Лента"
+msgstr "Tape"
+
+#: app/main/routes.py:179
+msgid "Ваще сообщение отправленно"
+msgstr "The message has been sent."
+
+#: app/main/routes.py:181 app/templates/profile.html:28
+#, fuzzy
+msgid "Отправить сообщение"
+msgstr "Send"
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s написал %(when)s"
+msgstr "%(username)s wrote %(when)s"
+
+#: app/templates/_post.html:25
+msgid "Перевести"
+msgstr "Translate"
+
+#: app/templates/base.html:10
+msgid "Название сайта"
+msgstr "Site name"
+
+#: app/templates/base.html:27
+msgid "Главная"
+msgstr "Home"
+
+#: app/templates/base.html:30
+msgid "Посты"
+msgstr "Posts"
+
+#: app/templates/base.html:48 app/templates/messages.html:4
+msgid "Сообщения"
+msgstr "Messages"
+
+#: app/templates/base.html:54
+msgid "Выйти"
+msgstr "Logout"
+
+#: app/templates/index.html:8
+msgid "Список статей"
+msgstr "List of articles"
+
+#: app/templates/index.html:18 app/templates/messages.html:17
+#: app/templates/profile.html:42 app/templates/search.html:11
+msgid "Назад"
+msgstr "Back"
+
+#: app/templates/index.html:23 app/templates/messages.html:12
+#: app/templates/profile.html:47 app/templates/search.html:16
+msgid "Вперед"
+msgstr "Ahead"
+
+#: app/templates/profile.html:10
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/profile.html:12 app/templates/profile_popup.html:7
+#, fuzzy
+msgid "Был в сети"
+msgstr "online"
+
+#: app/templates/profile.html:13
+msgid "подписчиков"
+msgstr "subscribers"
+
+#: app/templates/profile.html:13
+msgid "отслеживаемые"
+msgstr "following"
+
+#: app/templates/profile.html:15
+msgid "Редактировать"
+msgstr "Edit"
+
+#: app/templates/profile.html:19
+msgid "Подписаться"
+msgstr "Subscribe"
+
+#: app/templates/profile.html:24 app/templates/profile_popup.html:22
+msgid "Отписаться"
+msgstr "Unsubscribe"
+
+#: app/templates/profile_popup.html:9
+#, fuzzy, python-format
+msgid "%(count)d подписчиков"
+msgstr "%(count)d subscribers"
+
+#: app/templates/profile_popup.html:9
+#, fuzzy, python-format
+msgid "%(count)d отслеживаемые"
+msgstr "%(count)d following"
+
+#: app/templates/profile_popup.html:15
+#, fuzzy
+msgid "Подпитсаться"
+msgstr "Subscribe"
+
+#: app/templates/search.html:3
+msgid "Результаты поиска"
+msgstr "Search results"
+
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Отправить сообщение %(recipient)s"
+msgstr "Send a message %(recipient)s"
+
+#: app/templates/auth/login.html:7
+#, fuzzy
+msgid "Забыли пароль?"
+msgstr "Пароль"
+
+#: app/templates/auth/login.html:8
+msgid "Восстановить пароль"
+msgstr "Restore password"
+
+#: app/templates/auth/login.html:10
+msgid "Еще нет аккаунта?"
+msgstr "You don't have an account yet?"
+
+#: app/templates/auth/login.html:11
+msgid "Зарегистрируйтесь"
+msgstr "Sing in"
+
+#: app/templates/errors/404.html:3
+msgid "Страница не найдена"
+msgstr "Page not found"
+
+#: app/templates/errors/404.html:4 app/templates/errors/500.html:4
+msgid "На главную"
+msgstr "Home"
+
+#: app/templates/errors/500.html:3
+msgid "Произошла непредвиденная ошибка"
+msgstr "Unforeseen error"
+

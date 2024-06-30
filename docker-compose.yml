@@ -1,0 +1,46 @@
+services:
+  app:
+    container_name: testsite
+    build: .
+    ports:
+      - 8000:5000
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env-container
+    networks:
+      - testsite-network
+
+  db:
+    env_file:
+      - .env-mysql
+    container_name: mysql
+    image: mysql:latest
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - testsite-network
+
+  elasticsearch:
+    container_name: elasticsearch
+    image: elasticsearch:8.7.1
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    networks:
+      - testsite-network
+
+volumes:
+  db_data:
+    driver: local
+  es_data:
+    driver: local
+
+networks:
+  testsite-network:
+
+

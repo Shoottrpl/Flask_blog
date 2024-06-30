@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import 'bootstrap_wtf.html' as wtf %}
+{% block content %}
+    <h1>{{_('Войти')}}</h1>
+    {{ wtf.quick_form(form) }}
+    <p>
+        {{_('Забыли пароль?')}}
+        <a href="{{url_for('auth.reset_password_form')}}">{{_('Восстановить пароль')}}</a>
+    </p>
+    <p>{{_('Еще нет аккаунта?')}}
+    <a href="{{url_for('auth.register')}}">{{_('Зарегистрируйтесь')}}</a></p>
+{% endblock %}
