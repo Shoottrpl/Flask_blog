@@ -12,7 +12,12 @@
                     {% if user.last_seen %}<li>{{_('Был в сети')}}: {{moment(user.last_seen).format('LLL')}}</li>{% endif %}
                     <li>{{user.followers_count()}} {{_('подписчиков')}}, {{user.following_count()}} {{_('отслеживаемые')}}</li>
                     {% if user == current_user %}
-                    <li><a href="{{url_for('main.edit_profile')}}">{{_('Редактировать')}}</a></li>
+                        <li><a href="{{url_for('main.edit_profile')}}">{{_('Редактировать')}}</a></li>
+                        {% if not current_user.get_task_in_progress('export_posts') %}
+                            <p>
+                                <a href="{{url_for('main.export_posts')}}">{{_('Экспортируйте свои публикации')}}</a>
+                            </p>
+                        {% endif %}
                     {% elif not current_user.is_following(user) %}
                             <form action="{{ url_for('main.follow', username=current_user.name) }}" method="post">
                                 {{ form.hidden_tag() }}

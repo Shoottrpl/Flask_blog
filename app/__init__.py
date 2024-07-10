@@ -9,6 +9,8 @@ from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from elasticsearch import Elasticsearch
+from redis import Redis
+import rq
 from config import Config
 
 
@@ -38,6 +40,8 @@ def create_app(config_class=Config):
     babel.init_app(app)
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URI']]) \
         if app.config['ELASTICSEARCH_URI'] else None
+    app.redis = Redis.from_url(app.config['REDIS_URL'])
+    app.task_queue = rq.Queue('testsite-tasks', connection=app.redis)
 
     from app.errors import bp as error_bp
     app.register_blueprint(error_bp)

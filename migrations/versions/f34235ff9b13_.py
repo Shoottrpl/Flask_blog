@@ -1,13 +1,13 @@
 """empty message
 
 Revision ID: f34235ff9b13
-Revises: 
+Revises:
 Create Date: 2024-05-20 23:47:13.007136
 
 """
 from alembic import op
 import sqlalchemy as sa
-import sqlalchemy_utils
+
 
 
 # revision identifiers, used by Alembic.
@@ -22,7 +22,6 @@ def upgrade():
     op.create_table('menu',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=50), nullable=False),
-    sa.Column('url', sqlalchemy_utils.types.url.URLType(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('user',
